@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 // IF YOU FOLLOWED THE TUTORIAL THE ONE THAT HE TEACHES WOULD NOT WORK SINCE IT WAS LARAVEL 6 AND AS OF NOW YOU ARE USING LARAVEL 8
 // TO FIX THE ISSUE WE USE THIS LINK: https://stackoverflow.com/questions/63807930/target-class-controller-does-not-exist-laravel-8
-Route::get('/pizzas', ); # ControllerName@actionFunctionInController
+Route::get('/pizzas', [PizzaController::class, "index"]); # ControllerName@actionFunctionInController
 Route::get("/pizzas/{id}", [PizzaController::class, "show"]); # ControllerName@actionFunctionInController
 
 /*Route::get('/pizzas', function () {
