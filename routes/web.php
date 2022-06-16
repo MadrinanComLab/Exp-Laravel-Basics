@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PizzaController; // THIS IS NECESSARY TO ACCES THE CONTROLLER
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,12 @@ Route::get('/', function () {
     return view('welcome', ["page" => "Welcome"]); # YOU CAN SEE THE WELCOME FILE ON resources/views/welcome.blame.php
 });
 
-Route::get('/pizzas', function () {
+// IF YOU FOLLOWED THE TUTORIAL THE ONE THAT HE TEACHES WOULD NOT WORK SINCE IT WAS LARAVEL 6 AND AS OF NOW YOU ARE USING LARAVEL 8
+// TO FIX THE ISSUE WE USE THIS LINK: https://stackoverflow.com/questions/63807930/target-class-controller-does-not-exist-laravel-8
+Route::get('/pizzas', ); # ControllerName@actionFunctionInController
+Route::get("/pizzas/{id}", [PizzaController::class, "show"]); # ControllerName@actionFunctionInController
+
+/*Route::get('/pizzas', function () {
     $pizza = [
         [ "type" => "Hawaiian", "base" => "Cheesy Crust" ],
         [ "type" => "Volcano", "base" => "Garlic Crust" ],
@@ -35,7 +41,7 @@ Route::get('/pizzas', function () {
         "page" => "Pizzas",
         "name" => $name,
         "age" => $age
-    ]); */
+    ]);
 
     // OR LIKE THIS:
     return view('pizzas', [
@@ -43,11 +49,12 @@ Route::get('/pizzas', function () {
         "page" => "Pizzas",
         "name" => request("name"),
         "age" => request("age")
-    ]);
+    ]); 
 });
 
 // THE ROUTE BELOW DEMONSTRATE THE ROUTE PARAM WILDCARD
-Route::get("/pizzas/{id}", function()
+Route::get("/pizzas/{id}", function($id)
 {
-    return view('details', ["page" => "Details"]);
-});
+    // USE THE $id VARIABLE TO QUERY THE DB FOR A RECORD
+    // return view('details', [ "page" => "Details", "id" => $id ]);
+}); */

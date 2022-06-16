@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="/css/main.css"><!--/ NO NEED TO INCLUDE public, FOR EXAMPLE: public/css/main.css /-->
 
         <!--/ FAVICON /-->
-        <link rel="icon" type="image/x-icon" href="image/favicon.ico"/>
+        <link rel="icon" type="image/x-icon" href="image/favicon.ico">
     </head>
     <body>
         @yield("content") <!--/ THIS WILL DISPLAY ANY THING IN BETWEEN OF @section("content") AND @endsection /-->]
