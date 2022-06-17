@@ -51,3 +51,12 @@ SOMETHING TO REFLECT WITH MIGRATION AND ELOQUENT MODEL:
 BOTH OF THESE ARE FOR MANIPULATING DATABASE
 * MIGRATION WAS FOR ADDING/CREATING TABLE AND DATABSES
 * ELOQUENT WAS FOR ACCESSING DATA FROM SPECIFIC TABLE
+
+MVC NAMING CONVENTION/CONTROLLER NAMING CONVENTION
+
+                            PIZZA MODEL
+Request    | Route            | Controller & Action    | View
+-----------+------------------+------------------------+----------
+GET        | /pizzas          | PizzaController@index  | index
+GET        | /pizzas/{id}     | PizzaController@show   | show
+GET        | /pizzas/create   | PizzaController@create | create

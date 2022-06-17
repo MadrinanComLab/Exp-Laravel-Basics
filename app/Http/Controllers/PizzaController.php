@@ -22,7 +22,7 @@ class PizzaController extends Controller
         # $pizza = Pizza::where("type", "hawaiian")->get();
         $pizza = Pizza::latest()->get(); # RIGHT NOW, THIS IS SIMILAR TO Pizza::all();
 
-        return view('pizzas', [
+        return view('pizzas.index', [
             "pizza" => $pizza, 
             "page" => "Pizzas",
             "name" => request("name"),
@@ -32,6 +32,11 @@ class PizzaController extends Controller
 
     public function show($id)
     {
-        return view('details', [ "page" => "Details", "id" => $id ]);
+        return view('pizzas.show', [ "page" => "Details", "id" => $id ]);
+    }
+
+    public function create()
+    {
+        return view('pizzas.create', [ "page" => "Create" ]);
     }
 }
