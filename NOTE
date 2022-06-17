@@ -8,3 +8,9 @@ php artisan make:controller ControllerName
 
 LOCATION OF THE CONTROLLER:
 app/Http/Controllers
+
+COMMAND FOR CREATING LARAVEL MIGRATION:
+php artisan make:migration migration_name
+
+LOCATION OF MIGRATION:
+database/migrations
