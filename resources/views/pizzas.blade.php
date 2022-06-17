@@ -17,14 +17,17 @@
 
         @foreach ($pizza as $p)
             <div>
-                {{ ($loop-> index) +1 }}.) {{ $p["type"] }} - {{ $p["base"] }}
+                <!--/ {{ ($loop-> index) +1 }}.) {{ $p["type"] }} - {{ $p["base"] }}
                 @if ($loop->first)
                     <span> - First in the loop</span>
                 @endif
                 
                 @if ($loop->last)
                     <span> - Last in the loop</span>
-                @endif
+                @endif /-->
+
+                <!--/ THE THREE BELOW WAS THE COLUMN IN THE DATABASE pizzas /-->
+                {{ $p->name }} | {{ $p->type }} | {{ $p->base }}
             </div>
         @endforeach
     </div>
