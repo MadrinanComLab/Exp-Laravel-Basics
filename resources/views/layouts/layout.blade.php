@@ -16,7 +16,7 @@
         <link rel="icon" type="image/x-icon" href="image/favicon.ico">
     </head>
     <body>
-        @yield("content") <!--/ THIS WILL DISPLAY ANY THING IN BETWEEN OF @section("content") AND @endsection /-->]
+        @yield("content") <!--/ THIS WILL DISPLAY ANY THING IN BETWEEN OF @section("content") AND @endsection /-->
 
         <footer>
             Copyright 2022 - Pizza House

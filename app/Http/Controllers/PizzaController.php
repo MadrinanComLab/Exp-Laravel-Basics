@@ -32,7 +32,10 @@ class PizzaController extends Controller
 
     public function show($id)
     {
-        return view('pizzas.show', [ "page" => "Details", "id" => $id ]);
+        # $pizza = Pizza::find($id);
+        $pizza = Pizza::findOrFail($id); # IF THE ITEM DOES NOT EXIST IT WIL REDIRECT TO A 404 PAGE INSTEAD OF DEBUGGING PAGE
+
+        return view('pizzas.show', [ "page" => "Details", "pizza" => $pizza ]);
     }
 
     public function create()
