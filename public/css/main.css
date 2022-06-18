@@ -98,6 +98,9 @@ footer {
   border: 0;
   margin-top: 20px;
 }
+.create-pizza fieldset {
+  border: 0;
+}
 
 /* pizza details page */
 .pizza-details {

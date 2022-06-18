@@ -28,10 +28,10 @@
         <fieldset>
             <label>Extra toppings:</label>
             <!--/ NOTE: NOTICE THAT toppings[] HAS SQUARE BRACKET. THAT IS BECAUSE WE WANT TO GET ARRAY VALUES AND SEND IT TO THE SERVER. | WITHOUT SQUARE BRACKET IT WILL ONLY GET THE LAST ONE YOU SELECTED /-->
-            <input type="checkbox" name="toppings[]" value="Mushrooms">Mushrooms
-            <input type="checkbox" name="toppings[]" value="Peppers">Peppers
-            <input type="checkbox" name="toppings[]" value="Garlic">Garlic
-            <input type="checkbox" name="toppings[]" value="Olives">Olives
+            <input type="checkbox" name="toppings[]" value="Mushrooms">Mushrooms<br/>
+            <input type="checkbox" name="toppings[]" value="Peppers">Peppers<br/>
+            <input type="checkbox" name="toppings[]" value="Garlic">Garlic<br/>
+            <input type="checkbox" name="toppings[]" value="Olives">Olives<br/>
         </fieldset>
 
         <input type="submit" value="Order Pizza">
