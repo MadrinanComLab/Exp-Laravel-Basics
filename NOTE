@@ -62,3 +62,21 @@ GET        | /pizzas/{id}     | PizzaController@show    | show
 GET        | /pizzas/create   | PizzaController@create  | create
 POST       | /pizzas          | PizzaController@store   | ---
 DELETE     | /pizzas/{id}     | PizzaController@destroy | ---
+
+THIS PROJECT USES SASS IN DESIGNING ITS PAGE. 
+IN CASE YOU DON'T SASS IN YOUR NODE JS (AND YES YOU NEED NODE JS) ENTER THIS COMMAND USING BASH:
+npm install node-sass --save
+npm install sass
+npm install sass-loader
+
+THE COMMAND ABOVE WAS USED BECAUSE IN MY CASE I DON'T HAVE sass & sass-loader IN package.json
+
+NOW THE GUY ON THE TUTORIAL USED npm install TO INSTALL mix IN THIS PROJECT AND THAT FILE IS webpack.mix.js
+
+TO COMPILE OUR SASS ENTER THIS COMMAND USING BASH (RUN THIS COMMAND EVERY TIME YOU MADE CHANGES TO YOUR SASS FILE):
+npm run dev
+
+NOTE: MAKE SURE FILE YOU'VE CALLED IN wepack.mix.js WAS EXISTING, IF NOT IT WILL THROW AN ERROR
+
+THIS COMMAND WILL ABLE TO COMPILE THE CHANGES EVERY TIME MAKE A CHANGES TO YOUR SASS FILE:
+npm run watch
