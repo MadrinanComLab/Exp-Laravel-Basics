@@ -26,6 +26,11 @@ Route::post("/pizzas", [PizzaController::class, "store"]);
 Route::get("/pizzas/{id}", [PizzaController::class, "show"]); # ControllerName@actionFunctionInController
 Route::delete("/pizzas/{id}", [PizzaController::class, "destroy"]);
 
+// ROUTES BELOW WAS CREATE WHEN WE RUN: composer require laravel/ui
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 /*Route::get('/pizzas', function () {
     $pizza = [
         [ "type" => "Hawaiian", "base" => "Cheesy Crust" ],
