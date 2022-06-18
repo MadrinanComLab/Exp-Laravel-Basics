@@ -64,4 +64,12 @@ class PizzaController extends Controller
 
         return redirect("/")->with("msg", "Thank you for ordering!"); # THIS IS HOW WE PASS DATA IN redirect() AND THIS DATA IS A SESSION DATA
     }
+
+    public function destroy($id)
+    {
+        $pizza = Pizza::findOrFail($id);
+        $pizza->delete();
+
+        return redirect("/pizzas");
+    }
 }

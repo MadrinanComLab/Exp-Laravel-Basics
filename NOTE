@@ -55,9 +55,10 @@ BOTH OF THESE ARE FOR MANIPULATING DATABASE
 MVC NAMING CONVENTION/CONTROLLER NAMING CONVENTION
 
                             PIZZA MODEL
-Request    | Route            | Controller & Action    | View
------------+------------------+------------------------+----------
-GET        | /pizzas          | PizzaController@index  | index
-GET        | /pizzas/{id}     | PizzaController@show   | show
-GET        | /pizzas/create   | PizzaController@create | create
-POST       | /pizzas          | PizzaController@store  | ---
+Request    | Route            | Controller & Action     | View
+-----------+------------------+-------------------------+----------
+GET        | /pizzas          | PizzaController@index   | index
+GET        | /pizzas/{id}     | PizzaController@show    | show
+GET        | /pizzas/create   | PizzaController@create  | create
+POST       | /pizzas          | PizzaController@store   | ---
+DELETE     | /pizzas/{id}     | PizzaController@destroy | ---

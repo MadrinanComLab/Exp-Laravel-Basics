@@ -24,6 +24,7 @@ Route::get('/pizzas', [PizzaController::class, "index"]); # ControllerName@actio
 Route::get("/pizzas/create", [PizzaController::class, "create"]);
 Route::post("/pizzas", [PizzaController::class, "store"]);
 Route::get("/pizzas/{id}", [PizzaController::class, "show"]); # ControllerName@actionFunctionInController
+Route::delete("/pizzas/{id}", [PizzaController::class, "destroy"]);
 
 /*Route::get('/pizzas', function () {
     $pizza = [
