@@ -21,7 +21,7 @@
         <select name="base" id="base">
             <option value="cheesy crust">Cheesy Crust</option>
             <option value="garlic crust">Garlic Crust</option>
-            <option value="thin & crispy">Thin & Crispy/option>
+            <option value="thin & crispy">Thin & Crispy</option>
             <option value="thick">Thick</option>
         </select>
 

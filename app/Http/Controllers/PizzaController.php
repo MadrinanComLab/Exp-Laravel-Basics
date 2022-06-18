@@ -45,6 +45,10 @@ class PizzaController extends Controller
 
     public function store()
     {
+        error_log(request("name")); // THIS WILL GET THE DATA IN INPUT FIELD THAT HAS A NAME OF 'name'
+        error_log(request("type"));
+        error_log(request("base"));
+
         return redirect("/");
     }
 }
