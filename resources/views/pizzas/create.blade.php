@@ -3,7 +3,9 @@
 @section("content") <!--/ THE CHUCK OF CODE IN HERE WILL PUT IT IN layouts/layout.blade.php IN @yield("content") /-->
 <div class="wrapper create-pizza">
     <h1>Create a new Pizza</h1>
-    <form action="" method="">
+
+    <form action="/pizzas" method="POST">
+        @csrf <!--/ CSRF = Cross-site request forgery | WITHOUT THIS; IF YOU SUBMIT THE FORM IT WILL THROW ERROR 419 WHICH IS BUILT IN IN LARAVEL TO PROTECT THE SITE FROM CSRF /-->
         <label for="name">Your name:</label>
         <input type="text" name="name" id="name">
         

@@ -42,4 +42,9 @@ class PizzaController extends Controller
     {
         return view('pizzas.create', [ "page" => "Create" ]);
     }
+
+    public function store()
+    {
+        return redirect("/");
+    }
 }

@@ -60,3 +60,4 @@ Request    | Route            | Controller & Action    | View
 GET        | /pizzas          | PizzaController@index  | index
 GET        | /pizzas/{id}     | PizzaController@show   | show
 GET        | /pizzas/create   | PizzaController@create | create
+POST       | /pizzas          | PizzaController@store  | ---

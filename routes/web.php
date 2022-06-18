@@ -22,6 +22,7 @@ Route::get('/', function () {
 // TO FIX THE ISSUE WE USE THIS LINK: https://stackoverflow.com/questions/63807930/target-class-controller-does-not-exist-laravel-8
 Route::get('/pizzas', [PizzaController::class, "index"]); # ControllerName@actionFunctionInController
 Route::get("/pizzas/create", [PizzaController::class, "create"]);
+Route::post("/pizzas", [PizzaController::class, "store"]);
 Route::get("/pizzas/{id}", [PizzaController::class, "show"]); # ControllerName@actionFunctionInController
 
 /*Route::get('/pizzas', function () {
