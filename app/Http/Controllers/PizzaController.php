@@ -45,10 +45,23 @@ class PizzaController extends Controller
 
     public function store()
     {
-        error_log(request("name")); // THIS WILL GET THE DATA IN INPUT FIELD THAT HAS A NAME OF 'name'
-        error_log(request("type"));
-        error_log(request("base"));
+        # error_log(request("name")); # THIS WILL GET THE DATA IN INPUT FIELD THAT HAS A NAME OF 'name'
+        # error_log(request("type")); # THIS WILL GET THE DATA IN INPUT FIELD THAT HAS A NAME OF 'type'
+        # error_log(request("base")); # THIS WILL GET THE DATA IN INPUT FIELD THAT HAS A NAME OF 'base'
 
-        return redirect("/");
+        # CREATE AN INSTANCE OF PIZZA CLASS 
+        # REMEMBER THIS PIZZA WAS THE ELOQUENT MODEL THAT WE CREATED PREVIOUSLY
+        # THROUGH ELOQUENT MODEL WE CAN DO OPERATION SUCH AS CRUD (CREATE - READ - UPDATE - DELETE)
+        $pizza = new Pizza(); 
+
+        $pizza->name = request("name"); # REMEMBER $pizza IS THE INSTANCE OF OUR DATABASE AND INSIDE THAT DATABASE WE HAVE TABLE 'pizzas' AND THAT TABLE HAS COLUMN 'name'  IN IT
+        $pizza->type = request("type"); # REMEMBER $pizza IS THE INSTANCE OF OUR DATABASE AND INSIDE THAT DATABASE WE HAVE TABLE 'pizzas' AND THAT TABLE HAS COLUMN 'type'  IN IT
+        $pizza->base = request("base"); # REMEMBER $pizza IS THE INSTANCE OF OUR DATABASE AND INSIDE THAT DATABASE WE HAVE TABLE 'pizzas' AND THAT TABLE HAS COLUMN 'base'  IN IT
+        $pizza->toppings = request("toppings"); # REMEMBER $pizza IS THE INSTANCE OF OUR DATABASE AND INSIDE THAT DATABASE WE HAVE TABLE 'pizzas' AND THAT TABLE HAS COLUMN 'toppings'  IN IT
+        
+        # error_log(request("toppings"));
+        $pizza->save();
+
+        return redirect("/")->with("msg", "Thank you for ordering!"); # THIS IS HOW WE PASS DATA IN redirect() AND THIS DATA IS A SESSION DATA
     }
 }

@@ -9,8 +9,6 @@
             Pizza List
         </div>
 
-        <p>Hello {{ $name }}, your age is {{ $age }}</p>
-
         <!--/ @for ($i = 0; $i < count($pizza); $i++)
             <p>{{ $pizza[$i]["type"] }} - {{ $pizza[$i]["base"] }}</p>
         @endfor /-->
@@ -27,7 +25,7 @@
                 @endif /-->
 
                 <!--/ THE THREE BELOW WAS THE COLUMN IN THE DATABASE pizzas /-->
-                {{ $p->name }} | {{ $p->type }} | {{ $p->base }}
+                <p onclick="window.location = '/pizzas/{{ $p->id }}'">{{ $p->name }} | {{ $p->type }} | {{ $p->base }}</p>
             </div>
         @endforeach
     </div>
