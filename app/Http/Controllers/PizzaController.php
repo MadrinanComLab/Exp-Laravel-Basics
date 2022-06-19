@@ -7,6 +7,15 @@ use App\Models\Pizza;
 
 class PizzaController extends Controller
 {
+    # THIS IS A CONTRUCTOR IN PHP
+    /* public function __construct()
+    {
+        # THIS WILL PROTECT ALL THE ACTION INSIDE THIS CONTROLLER
+        # BUT THERE IS AN ACTION HERE THAT WE DON'T WANT TO PROTECT SO IT WILL ALLOW THE ANNONYMOUS USERS TO ORDER A PIZZA
+        # THESE ACTIONS ARE: create() AND store()
+        $this->middleware("auth");
+    } */
+
     // index() and show() ARE BOTH NAMING CONVENTION THAT IS COMMONLY USED BY LARAVEL DEVS
     public function index() // THIS IS FOR /pizzas
     {

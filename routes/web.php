@@ -21,11 +21,12 @@ Route::get('/', function () {
 
 // IF YOU FOLLOWED THE TUTORIAL THE ONE THAT HE TEACHES WOULD NOT WORK SINCE IT WAS LARAVEL 6 AND AS OF NOW YOU ARE USING LARAVEL 8
 // TO FIX THE ISSUE WE USE THIS LINK: https://stackoverflow.com/questions/63807930/target-class-controller-does-not-exist-laravel-8
-Route::get('/pizzas', [PizzaController::class, "index"]); # ControllerName@actionFunctionInController
+# middleware("auth") WILL CHECK IF USER HAS LOGGED IN TO ACCESS SPECIFIC ROUTE (THIS IS THE EASIEST WAY OF PROTECTING OUR ROUTES)
+Route::get('/pizzas', [PizzaController::class, "index"])->middleware("auth"); # ControllerName@actionFunctionInController
 Route::get("/pizzas/create", [PizzaController::class, "create"]);
 Route::post("/pizzas", [PizzaController::class, "store"]);
-Route::get("/pizzas/{id}", [PizzaController::class, "show"]); # ControllerName@actionFunctionInController
-Route::delete("/pizzas/{id}", [PizzaController::class, "destroy"]);
+Route::get("/pizzas/{id}", [PizzaController::class, "show"])->middleware("auth"); # ControllerName@actionFunctionInController
+Route::delete("/pizzas/{id}", [PizzaController::class, "destroy"])->middleware("auth");
 
 // ROUTES BELOW WAS CREATE WHEN WE RUN: composer require laravel/ui
 Auth::routes();

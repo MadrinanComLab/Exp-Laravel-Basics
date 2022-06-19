@@ -27,7 +27,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <img class="nav-logo" src="image/logo.png" alt="">
+                <img class="nav-logo" src="../image/logo.png" alt="">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     PizzaHouse
                 </a>
