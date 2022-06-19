@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PizzaController; // THIS IS NECESSARY TO ACCES THE CONTROLLER
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +30,8 @@ Route::delete("/pizzas/{id}", [PizzaController::class, "destroy"]);
 // ROUTES BELOW WAS CREATE WHEN WE RUN: composer require laravel/ui
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index']);
+# Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 /*Route::get('/pizzas', function () {
     $pizza = [

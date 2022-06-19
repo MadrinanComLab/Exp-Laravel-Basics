@@ -10271,3 +10271,8 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.nav-logo {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}

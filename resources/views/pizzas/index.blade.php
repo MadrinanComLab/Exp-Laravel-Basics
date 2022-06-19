@@ -1,4 +1,4 @@
-@extends("layouts.layout") <!--/ THIS MEANS layouts/layout.blade.php /-->
+@extends("layouts.app") <!--/ THIS MEANS layouts/app.blade.php /-->
 
 @section("content") <!--/ THE CHUCK OF CODE IN HERE WILL PUT IT IN layouts/layout.blade.php IN @yield("content") /-->    
     <div class="wrapper pizza-index">
