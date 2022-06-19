@@ -107,3 +107,15 @@ public function __construct()
     # THESE ACTIONS ARE: create() AND store()
     $this->middleware("auth");
 }
+
+YOU CAN SEE THE CONTROLLER OF THE ROUTES AND OTHER DETAILS ABOUT USING THIS COMMAND (RUN THIS USING CMD):
+php artisan route:list
+
+EXAMPLE OF HOW TO NAME A ROUTE:
+Route::get("/orders/pizzas/create", [PizzaController::class, "create"])->name("pizzas.create");
+
+AND THIS IS HOW YOU USED IT:
+<a href="{{ route('pizzas.create') }}">Order a Pizza</a>
+
+IF YOU NEED TO PASS A VALUE/VARIABLE, YOU CAN DO SOMETHING LIKE THIS:
+<a href="{{ route('pizzas.create', $pizza->id) }}"></a>

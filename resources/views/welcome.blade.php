@@ -23,7 +23,8 @@
         </div>
         <p class="msg">{{ session("msg") }}</p> <!--/ THIS IS HOW WE DISPLAY SESSION DATA IN LARAVEL /-->
 
-        <a href="/pizzas/create">Order a Pizza</a>
+        <a href="{{ route('pizzas.create') }}">Order a Pizza</a>
+        <!--/ <a href="/pizzas/create">Order a Pizza</a> /-->
     </div>
 </div>
 @endsection

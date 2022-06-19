@@ -13,7 +13,7 @@
         @endforeach
     </ul>
 
-    <form action="/pizzas/{{ $pizza->id }}" method="POST"><!--/ method="DELETE" BROWSERS DON'T USUALLY UNDERSTAND THIS, SO WE'LL FAKE IT AND USE POST /-->
+    <form action="{{ route('pizzas.destroy', $pizza->id) }}" method="POST"><!--/ method="DELETE" BROWSERS DON'T USUALLY UNDERSTAND THIS, SO WE'LL FAKE IT AND USE POST /-->
         @csrf
         @method("DELETE") <!--/ THIS WILL TELL LARAVEL THAT WE'RE TRYING TO USE DELETE REQUEST METHOD /-->
         <button>Complete Order</button>

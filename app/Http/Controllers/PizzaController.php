@@ -79,6 +79,6 @@ class PizzaController extends Controller
         $pizza = Pizza::findOrFail($id);
         $pizza->delete();
 
-        return redirect("/pizzas");
+        return redirect(route("pizzas.index"));
     }
 }
